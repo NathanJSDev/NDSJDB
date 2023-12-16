@@ -1,0 +1,36 @@
+.back{
+    -fx-background-color:#000000;
+}
+.l1{
+    -fx-background-color: #303030;
+}
+.wt{
+    -fx-text-fill: #fff;
+}
+.grad0{-fx-background-color: linear-gradient(to right, #9752da, #9e00ff)}
+.grad1{-fx-background-color: linear-gradient(to right, #9e00ff, #e300ff)}
+
+.border-radiusapp{
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+}
+
+.top{
+    -fx-text-fill: #fff;
+    -fx-background-radius: 20px;
+}
+.closeButton{
+    -fx-background-color: #e45954;
+    -fx-border-radius: 100px;
+    -fx-background-radius: 100px;
+}
+.maximizeButton{
+    -fx-background-color: #f2b93e;
+    -fx-border-radius: 100px;
+    -fx-background-radius: 100px;
+}
+.minimizeButton{
+    -fx-background-color: #63c742;
+    -fx-border-radius: 100px;
+    -fx-background-radius: 100px;
+}
