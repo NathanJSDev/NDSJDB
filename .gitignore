@@ -1,0 +1,15 @@
+
+*.json
+*.class
+bin/scenes/styles/ms.css
+bin/scenes/images/3.png
+bin/scenes/images/7.png
+bin/scenes/images/Banner_NDSJDB-001.png
+bin/scenes/ndsjdb-conf.fxml
+bin/scenes/ndsjdb-dbs.fxml
+bin/scenes/ndsjdb-dbs.fxml
+bin/scenes/images/2.png
+bin/scenes/images/2.png
+bin/scenes/images/5.png
+bin/scenes/ndsjdb.fxml
+bin/scenes/images/6.png
