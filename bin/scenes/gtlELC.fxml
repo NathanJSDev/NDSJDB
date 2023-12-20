@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="153.0" prefWidth="300.0" stylesheets="@styles/ms.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scenes.gtlELC">
+   <center>
+      <BorderPane prefHeight="150.0" prefWidth="200.0" styleClass="back" BorderPane.alignment="CENTER">
+         <top>
+            <HBox alignment="CENTER_RIGHT" onMouseDragged="#MoveablePaneDrag" onMousePressed="#MoveablePanePress" prefHeight="35.0" prefWidth="300.0" style="-fx-background-color: #222;" BorderPane.alignment="CENTER_RIGHT">
+               <children>
+                  <Button maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#minimize" prefHeight="25.0" prefWidth="25.0" styleClass="minimizeButton">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button maxHeight="25.0" maxWidth="25.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="25.0" styleClass="closeButton">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <Label prefHeight="40.0" prefWidth="208.0" styleClass="wt" text="Open This External Link?" BorderPane.alignment="TOP_LEFT">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets left="20.0" top="10.0" />
+               </BorderPane.margin>
+            </Label>
+         </center>
+         <bottom>
+            <HBox alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#open" text="Open">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                     <styleClass>
+                        <String fx:value="wt" />
+                        <String fx:value="grad1" />
+                     </styleClass>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#cancel" style="-fx-background-color: #777777;" text="Cancel">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                     <styleClass>
+                        <String fx:value="wt" />
+                        <String fx:value="grad1" />
+                     </styleClass>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </center>
+   <styleClass>
+      <String fx:value="back" />
+      <String fx:value="border-radiusapp" />
+   </styleClass>
+</BorderPane>

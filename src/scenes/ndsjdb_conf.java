@@ -9,7 +9,7 @@ public class ndsjdb_conf {
 
    @FXML
     void GTlink(MouseEvent event) {
-
+        App.dialog.show();
     }
 
     private double xOffset = 0;
@@ -29,7 +29,6 @@ public class ndsjdb_conf {
 
     @FXML
     void close(ActionEvent event) {
-        System.out.println("close");
         App.primaryStage.close();
     }
 
@@ -47,7 +46,6 @@ public class ndsjdb_conf {
 
     @FXML
     void maximize(ActionEvent event) {
-        System.out.println("maximize");
         if (App.primaryStage.getStg().isFullScreen()) {
             App.primaryStage.getStg().setFullScreen(false);
         }else{
@@ -57,7 +55,6 @@ public class ndsjdb_conf {
 
     @FXML
     void minimize(ActionEvent event) {
-        System.out.println("minimize");
         App.primaryStage.getStg().setIconified(true);
     }
 

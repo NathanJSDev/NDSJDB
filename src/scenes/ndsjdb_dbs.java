@@ -1,10 +1,5 @@
 package scenes;
 
-import java.awt.Desktop;
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
@@ -13,8 +8,8 @@ import stages.App;
 public class ndsjdb_dbs {
 
     @FXML
-    void GTlink(MouseEvent event) throws URISyntaxException, IOException{
-        Desktop.getDesktop().browse(new URI("https://google.com"));
+    void GTlink(MouseEvent event){
+        App.dialog.show();  
     }
 
     private double xOffset = 0;
@@ -34,7 +29,6 @@ public class ndsjdb_dbs {
 
     @FXML
     void close(ActionEvent event) {
-        System.out.println("close");
         App.primaryStage.close();
     }
 
@@ -52,7 +46,6 @@ public class ndsjdb_dbs {
 
     @FXML
     void maximize(ActionEvent event) {
-        System.out.println("maximize");
         if (App.primaryStage.getStg().isFullScreen()) {
             App.primaryStage.getStg().setFullScreen(false);
         }else{
@@ -62,7 +55,6 @@ public class ndsjdb_dbs {
 
     @FXML
     void minimize(ActionEvent event) {
-        System.out.println("minimize");
         App.primaryStage.getStg().setIconified(true);
     }
 

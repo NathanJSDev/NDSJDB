@@ -29,12 +29,11 @@ public class ndsjdb implements Initializable{
 
     @FXML
     void GTlink(MouseEvent event) {
-        System.out.println("gtl");
+        App.dialog.show();
     }
     
     @FXML
     void close(ActionEvent event) {
-        System.out.println("close");
         App.primaryStage.close();
     }
 
@@ -51,7 +50,8 @@ public class ndsjdb implements Initializable{
 
     @FXML
     void createLDB(MouseEvent event) {
-        System.out.println("createLDB");
+        App.primaryStage.getStg().getScene().setRoot(App.parents[3]);
+        App.primaryStage.setScene(App.primaryStage.getStg().getScene());
     }
 
     @FXML
@@ -62,13 +62,11 @@ public class ndsjdb implements Initializable{
     
     @FXML
     void SeeAllDatabases(ActionEvent event) {
-        System.out.println("SeeAllDatabases");
         App.primaryStage.setScene(new Scene(App.parents[1]));
     }
 
     @FXML
     void maximize(ActionEvent event) {
-        System.out.println("maximize");
         if (App.primaryStage.getStg().isFullScreen()) {
             App.primaryStage.getStg().setFullScreen(false);
         }else{
@@ -78,7 +76,6 @@ public class ndsjdb implements Initializable{
 
     @FXML
     void minimize(ActionEvent event) {
-        System.out.println("minimize");
         App.primaryStage.getStg().setIconified(true);
     }
 
