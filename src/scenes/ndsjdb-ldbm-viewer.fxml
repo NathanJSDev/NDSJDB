@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" stylesheets="@styles/ms.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scenes.ndsjdb_ldbm">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" stylesheets="@styles/ms.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scenes.ndsjdb_ldbm_viewer">
    <center>
-      <BorderPane fx:id="ItAreaParent" prefHeight="200.0" prefWidth="200.0" styleClass="back" BorderPane.alignment="CENTER">
+      <BorderPane prefHeight="200.0" prefWidth="200.0" styleClass="back" BorderPane.alignment="CENTER">
          <top>
             <HBox alignment="CENTER_RIGHT" onMouseDragged="#MoveablePaneDrag" onMousePressed="#MoveablePanePress" prefHeight="67.0" prefWidth="840.0" style="-fx-background-color: #222;" BorderPane.alignment="CENTER_RIGHT">
                <children>
@@ -43,7 +43,7 @@
             </HBox>
          </top>
          <center>
-            <HBox fx:id="ItArea" onScroll="#scrolling" prefHeight="700.0" prefWidth="787.0" spacing="10.0" styleClass="grad0" BorderPane.alignment="CENTER" />
+            <TableView fx:id="table" prefHeight="641.0" prefWidth="779.0" styleClass="table" BorderPane.alignment="CENTER" />
          </center>
       </BorderPane>
    </center>

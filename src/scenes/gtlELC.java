@@ -31,6 +31,7 @@ public class gtlELC {
     @FXML
     void open(ActionEvent event) throws IOException, URISyntaxException{
         Desktop.getDesktop().browse(new URI("https://github.com/NathanJSDev/NDSJDB"));
+        App.dialog.close();
     }
 
     @FXML

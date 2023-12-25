@@ -6,7 +6,7 @@ import javafx.stage.StageStyle;
 
 public class Stg {
     private Stage MainStage = new Stage();
-    Stage[] Stages = new Stage[6];
+    Stage[] Stages = new Stage[8];
 
     public Stg(){
         for (Stage stage : Stages) {

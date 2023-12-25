@@ -34,3 +34,26 @@
     -fx-border-radius: 100px;
     -fx-background-radius: 100px;
 }
+
+.e300ff{
+    -fx-background-color: #e300ff;
+}
+
+.table{
+    -fx-background-color: #000;
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+}
+.table .placeholder{
+    -fx-background-color: #000;
+}
+.table .placeholder .label{
+    -fx-text-fill: #fff;
+}
+.table .column-header{
+    -fx-border-color: #fff;
+    -fx-border-width: 0px 1px 0px 1px;
+}
+.table .column-header-background .filler{
+    -fx-background-color: linear-gradient(to right, #9752da, #9e00ff)
+}

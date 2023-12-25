@@ -1,11 +1,6 @@
 package stages;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.nio.charset.StandardCharsets;
-
+import LDatabaseControllers.LDBController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -15,6 +10,8 @@ import javafx.stage.StageStyle;
 
 public class App extends Application {
 
+    public static LDBController LDBController = new LDBController();
+
     public static Parent[] parents = new App().getMainView();
 
     public static void main(String[] args) throws Exception {
@@ -23,13 +20,15 @@ public class App extends Application {
 
     public Parent[] getMainView(){
         try {
-            Parent[] pa = new Parent[6];
+            Parent[] pa = new Parent[8];
             pa[0] = new FXMLLoader(getClass().getResource("../scenes/ndsjdb.fxml")).load();
             pa[1] = new FXMLLoader(getClass().getResource("../scenes/ndsjdb-dbs.fxml")).load();
             pa[2] = new FXMLLoader(getClass().getResource("../scenes/ndsjdb-conf.fxml")).load();
-            pa[3] = new FXMLLoader(getClass().getResource("../scenes/ndsjdb-ldbm.fxml")).load();
-            // pa[4] = new FXMLLoader(getClass().getResource("../scenes/ndsjdb-cdbs.fxml")).load();
+            pa[3] = new FXMLLoader(getClass().getResource("../scenes/ndsjdb-ldbm-viewer.fxml")).load();
+            pa[4] = new FXMLLoader(getClass().getResource("../scenes/ndsjdb-nldbm-dbn.fxml")).load();
             pa[5] = new FXMLLoader(getClass().getResource("../scenes/gtlELC.fxml")).load();
+            pa[6] = new FXMLLoader(getClass().getResource("../scenes/ndsjdb-nldbm-dbt.fxml")).load();
+            pa[7] = new FXMLLoader(getClass().getResource("../scenes/ndsjdb-nldbm-dbte.fxml")).load();
 
             return pa;
         } catch (Exception e) {
@@ -55,17 +54,4 @@ public class App extends Application {
         dialog.setTitle("Open this external link?");
 
     }
-
-    static void writeOn(String Path, String text) throws FileNotFoundException {
-        final File file = new File(Path);
-
-        try (PrintWriter out = new PrintWriter(file, StandardCharsets.UTF_8)) {
-            out.print(text);
-            System.out.println("Dados gravados com sucesso em: " + Path);
-        } catch (IOException e) {
-            System.out.println("File not created!!\nCause: ");
-            e.printStackTrace();
-        }
-    }
-
 }
