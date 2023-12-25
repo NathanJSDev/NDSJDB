@@ -1,6 +1,7 @@
 
 *.json
 *.class
+bin/*
 bin/scenes/styles/ms.css
 bin/scenes/images/3.png
 bin/scenes/images/7.png
@@ -13,3 +14,5 @@ bin/scenes/images/2.png
 bin/scenes/images/5.png
 bin/scenes/ndsjdb.fxml
 bin/scenes/images/6.png
+*.dat
+tables.csv

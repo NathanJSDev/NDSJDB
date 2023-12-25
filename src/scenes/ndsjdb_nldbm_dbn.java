@@ -1,15 +1,20 @@
 package scenes;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import stages.App;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 
-public class ndsjdb implements Initializable{
+public class ndsjdb_nldbm_dbn{
+
+    @FXML
+    private TextField dbnTF;
+
+    @FXML
+    void GTlink(MouseEvent event) {
+        App.dialog.show();
+    }
 
     private double xOffset = 0;
     private double yOffset = 0;
@@ -21,16 +26,11 @@ public class ndsjdb implements Initializable{
     }
 
     @FXML
-    void MoveablePaneDrag(MouseEvent event){
+    void MoveablePaneDrag(MouseEvent event) {
         App.primaryStage.getStg().setX(event.getScreenX() - xOffset);
         App.primaryStage.getStg().setY(event.getScreenY() - yOffset);
     }
 
-    @FXML
-    void GTlink(MouseEvent event) {
-        App.dialog.show();
-    }
-    
     @FXML
     void close(ActionEvent event) {
         App.primaryStage.close();
@@ -43,16 +43,8 @@ public class ndsjdb implements Initializable{
     }
 
     @FXML
-    void createDB(MouseEvent event) {
-        System.out.println("createDB");
-        // TODO: Is it only for tests, i wasnt to add another button
-        App.primaryStage.getStg().getScene().setRoot(App.parents[3]);
-        App.primaryStage.setScene(App.primaryStage.getStg().getScene());
-    }
-
-    @FXML
-    void createLDB(MouseEvent event) {
-        App.primaryStage.getStg().getScene().setRoot(App.parents[4]);
+    void home(MouseEvent event) {
+        App.primaryStage.getStg().getScene().setRoot(App.parents[0]);
         App.primaryStage.setScene(App.primaryStage.getStg().getScene());
     }
 
@@ -66,7 +58,7 @@ public class ndsjdb implements Initializable{
     void maximize(ActionEvent event) {
         if (App.primaryStage.getStg().isFullScreen()) {
             App.primaryStage.getStg().setFullScreen(false);
-        }else{
+        } else {
             App.primaryStage.getStg().setFullScreen(true);
         }
     }
@@ -76,10 +68,12 @@ public class ndsjdb implements Initializable{
         App.primaryStage.getStg().setIconified(true);
     }
 
-    @SuppressWarnings("undefined")
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        
+    @FXML
+    void nextBtn(ActionEvent event) {
+        App.LDBController.createDBFolder(dbnTF.getText());
+
+        App.primaryStage.getStg().getScene().setRoot(App.parents[6]);
+        App.primaryStage.setScene(App.primaryStage.getStg().getScene());
     }
 
 }

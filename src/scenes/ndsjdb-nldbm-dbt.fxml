@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" stylesheets="@styles/ms.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scenes.ndsjdb_ldbm">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" stylesheets="@styles/ms.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scenes.ndsjdb_nldbm_dbt">
    <center>
-      <BorderPane fx:id="ItAreaParent" prefHeight="200.0" prefWidth="200.0" styleClass="back" BorderPane.alignment="CENTER">
+      <BorderPane prefHeight="200.0" prefWidth="200.0" styleClass="back" BorderPane.alignment="CENTER">
          <top>
             <HBox alignment="CENTER_RIGHT" onMouseDragged="#MoveablePaneDrag" onMousePressed="#MoveablePanePress" prefHeight="67.0" prefWidth="840.0" style="-fx-background-color: #222;" BorderPane.alignment="CENTER_RIGHT">
                <children>
@@ -43,7 +43,70 @@
             </HBox>
          </top>
          <center>
-            <HBox fx:id="ItArea" onScroll="#scrolling" prefHeight="700.0" prefWidth="787.0" spacing="10.0" styleClass="grad0" BorderPane.alignment="CENTER" />
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label styleClass="wt" text="New Local DataBase">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="20.0" top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label styleClass="wt" text="Table Name:">
+                           <VBox.margin>
+                              <Insets left="20.0" top="20.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="35.0" prefWidth="747.0">
+                           <children>
+                              <TextField fx:id="tbnTF" prefHeight="26.0" prefWidth="684.0" />
+                           </children>
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" top="2.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <Label layoutX="30.0" layoutY="85.0" styleClass="wt" text="Number of columns:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" top="2.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox layoutX="30.0" layoutY="107.0" prefHeight="35.0" prefWidth="747.0">
+                           <children>
+                              <TextField fx:id="nocTF" prefHeight="26.0" prefWidth="684.0" />
+                           </children>
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" top="2.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="36.0" prefWidth="787.0">
+                           <children>
+                              <Button fx:id="canTouch" alignment="CENTER" mnemonicParsing="false" onAction="#nextBtn" prefHeight="25.0" prefWidth="67.0" text="Next &gt;">
+                                 <styleClass>
+                                    <String fx:value="e300ff" />
+                                    <String fx:value="wt" />
+                                 </styleClass>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" right="20.0" top="2.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
          </center>
       </BorderPane>
    </center>
@@ -149,6 +212,7 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </GridPane.margin>
             </FlowPane>
+            <VBox prefHeight="200.0" prefWidth="100.0" />
          </children>
       </GridPane>
    </left>

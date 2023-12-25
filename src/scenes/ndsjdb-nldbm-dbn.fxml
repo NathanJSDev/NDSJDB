@@ -4,121 +4,14 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" stylesheets="@../scenes/styles/ms.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scenes.ndsjdb">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" stylesheets="@styles/ms.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scenes.ndsjdb_nldbm_dbn">
    <center>
       <BorderPane prefHeight="200.0" prefWidth="200.0" styleClass="back" BorderPane.alignment="CENTER">
-         <center>
-            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-               <top>
-                  <FlowPane prefHeight="73.0" prefWidth="840.0" BorderPane.alignment="CENTER">
-                     <children>
-                        <Label styleClass="wt" text="O que você quer fazer hoje?">
-                           <font>
-                              <Font name="Arial Black" size="24.0" />
-                           </font>
-                           <padding>
-                              <Insets left="25.0" />
-                           </padding>
-                        </Label>
-                     </children>
-                  </FlowPane>
-               </top>
-               <center>
-                  <GridPane prefHeight="180.0" prefWidth="787.0" BorderPane.alignment="CENTER">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="462.0" minWidth="10.0" percentWidth="40.0" prefWidth="295.3333435058594" />
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="507.33331298828125" minWidth="10.0" percentWidth="60.0" prefWidth="484.6666564941406" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints maxHeight="150.0" minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <BorderPane onMouseClicked="#createLDB" prefHeight="618.0" prefWidth="457.0">
-                           <GridPane.margin>
-                              <Insets right="5.0" />
-                           </GridPane.margin>
-                           <styleClass>
-                              <String fx:value="grad0" />
-                              <String fx:value="border-radiusapp" />
-                           </styleClass>
-                           <bottom>
-                              <VBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="290.0" BorderPane.alignment="CENTER">
-                                 <children>
-                                    <Label styleClass="wt" text="Criar Novo Banco Local">
-                                       <font>
-                                          <Font name="System Bold" size="20.0" />
-                                       </font>
-                                    </Label>
-                                 </children>
-                              </VBox>
-                           </bottom>
-                           <center>
-                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
-                                 <children>
-                                    <Label styleClass="wt" text="+">
-                                       <font>
-                                          <Font name="System Bold" size="64.0" />
-                                       </font>
-                                       <VBox.margin>
-                                          <Insets top="20.0" />
-                                       </VBox.margin>
-                                    </Label>
-                                 </children>
-                              </VBox>
-                           </center>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </BorderPane>
-                        <BorderPane onMouseClicked="#createDB" prefHeight="618.0" prefWidth="344.0" GridPane.columnIndex="1">
-                           <GridPane.margin>
-                              <Insets left="5.0" />
-                           </GridPane.margin>
-                           <styleClass>
-                              <String fx:value="grad1" />
-                              <String fx:value="border-radiusapp" />
-                           </styleClass>
-                           <bottom>
-                              <VBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="480.0" BorderPane.alignment="TOP_CENTER">
-                                 <children>
-                                    <Label styleClass="wt" text="Criar Novo Banco MySQL">
-                                       <font>
-                                          <Font name="System Bold" size="20.0" />
-                                       </font>
-                                    </Label>
-                                 </children>
-                              </VBox>
-                           </bottom>
-                           <center>
-                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
-                                 <children>
-                                    <Label styleClass="wt" text="+">
-                                       <font>
-                                          <Font name="System Bold" size="64.0" />
-                                       </font>
-                                       <VBox.margin>
-                                          <Insets top="20.0" />
-                                       </VBox.margin>
-                                    </Label>
-                                 </children>
-                              </VBox>
-                           </center>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </BorderPane>
-                     </children>
-                     <padding>
-                        <Insets left="30.0" right="30.0" />
-                     </padding>
-                  </GridPane>
-               </center>
-            </BorderPane>
-         </center>
          <top>
             <HBox alignment="CENTER_RIGHT" onMouseDragged="#MoveablePaneDrag" onMousePressed="#MoveablePanePress" prefHeight="67.0" prefWidth="840.0" style="-fx-background-color: #222;" BorderPane.alignment="CENTER_RIGHT">
                <children>
@@ -149,6 +42,49 @@
                </children>
             </HBox>
          </top>
+         <center>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label styleClass="wt" text="New Local DataBase">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="20.0" top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label styleClass="wt" text="DataBase Name:">
+                           <VBox.margin>
+                              <Insets left="20.0" top="20.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="35.0" prefWidth="747.0">
+                           <children>
+                              <TextField fx:id="dbnTF" prefHeight="26.0" prefWidth="684.0" />
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#nextBtn" prefHeight="25.0" prefWidth="67.0" text="Next &gt;">
+                                 <styleClass>
+                                    <String fx:value="e300ff" />
+                                    <String fx:value="wt" />
+                                 </styleClass>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" top="2.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </center>
       </BorderPane>
    </center>
    <left>
@@ -170,6 +106,9 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
+               <effect>
+                  <InnerShadow height="14.66" offsetX="1.0" offsetY="1.0" radius="6.83" width="14.66" />
+               </effect>
             </ImageView>
             <ImageView fitHeight="153.0" fitWidth="215.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -181,7 +120,7 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </GridPane.margin>
                <children>
-                  <BorderPane disable="true" maxHeight="50.0" maxWidth="192.0" opacity="0.75" prefHeight="50.0" prefWidth="192.0">
+                  <BorderPane maxHeight="50.0" maxWidth="194.0" onMouseClicked="#home" prefHeight="50.0" prefWidth="194.0">
                      <left>
                         <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                            <image>
@@ -200,7 +139,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </BorderPane>
-                  <BorderPane layoutX="10.0" layoutY="10.0" maxHeight="50.0" maxWidth="188.0" onMouseClicked="#databases" prefHeight="50.0" prefWidth="188.0">
+                  <BorderPane layoutX="10.0" layoutY="10.0" maxHeight="50.0" maxWidth="193.0" onMouseClicked="#databases" prefHeight="50.0" prefWidth="193.0">
                      <left>
                         <ImageView fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                            <image>
@@ -250,6 +189,7 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </GridPane.margin>
             </FlowPane>
+            <VBox prefHeight="200.0" prefWidth="100.0" />
          </children>
       </GridPane>
    </left>
